@@ -5,8 +5,9 @@ UBports Raspberry Pi Focus Group. Join the discussion on [our forum](https://for
 1. [Goals](#goals)
 2. [Benfits](#benefits)
 3. [Conceptional Questions](#conceptional-questions)
-4. [FAQ](#faq)
-5. [Team](#team)
+4. [Architecture](#architecture)
+5. [FAQ](#faq)
+6. [Team](#team)
 
 ## Goals
 ### Desktop
@@ -50,6 +51,38 @@ Android-devices and which are by design?
 * How does the variable size of SD cards in a Raspberry Pi affect installation and update
 concept?
 * How does the architecture aarch64 us? 
+
+## Architecture
+
+@startuml
+
+frame apps {
+[dialer]
+[messaging]
+[uNav]
+}
+
+frame services {
+[ofono]
+[locationd]
+[mir]  
+}
+
+frame hardware {
+[SIM908]
+[PiHAT]
+[PiTFT]
+}
+
+[dialer] ..> [ofono] : dbus
+[messaging] ..> [ofono] : dbus
+[uNav] ..> [locationd] : dbus
+[ofono] ..> [SIM908] : UART
+[locationd] ..> [SIM908] : UART
+[mir] ..> [PiTFT] : SPI, GPIO
+[mir] ..> [PiHAT] : I2C
+
+@enduml
 
 ## FAQ
 ### Why don't you use Android?
