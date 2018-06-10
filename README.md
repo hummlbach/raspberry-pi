@@ -54,7 +54,7 @@ concept?
 
 ## Architecture
 
-<img src='https://g.gravizo.com/svg?
+![architectural diagram](https://g.gravizo.com/svg?
 @startuml
 
 frame apps {
@@ -83,8 +83,7 @@ frame hardware {
 [mir] ..> [PiTFT] : SPI, GPIO
 [mir] ..> [PiHAT] : I2C
 
-@enduml
-' />
+@enduml)
 
 ## FAQ
 ### Why don't you use Android?
