@@ -54,8 +54,8 @@ concept?
 
 ## Architecture
 
-![architectural diagram](https://g.gravizo.com/svg?
-@startuml
+![architectural diagram](https://g.gravizo.com/svg?%40startuml%0D%0A%0D%0Aframe%20apps%20%7B%0D%0A%5Bdialer%5D%0D%0A%5Bmessaging%5D%0D%0A%5BuNav%5D%0D%0A%7D%0D%0A%0D%0Aframe%20services%20%7B%0D%0A%5Bofono%5D%0D%0A%5Blocationd%5D%0D%0A%5Bmir%5D%20%20%0D%0A%7D%0D%0A%0D%0Aframe%20hardware%20%7B%0D%0A%5BSIM908%5D%0D%0A%5BPiHAT%5D%0D%0A%5BPiTFT%5D%0D%0A%7D%0D%0A%0D%0A%5Bdialer%5D%20..%3E%20%5Bofono%5D%20%3A%20dbus%0D%0A%5Bmessaging%5D%20..%3E%20%5Bofono%5D%20%3A%20dbus%0D%0A%5BuNav%5D%20..%3E%20%5Blocationd%5D%20%3A%20dbus%0D%0A%5Bofono%5D%20..%3E%20%5BSIM908%5D%20%3A%20UART%0D%0A%5Blocationd%5D%20..%3E%20%5BSIM908%5D%20%3A%20UART%0D%0A%5Bmir%5D%20..%3E%20%5BPiTFT%5D%20%3A%20SPI%2C%20GPIO%0D%0A%5Bmir%5D%20..%3E%20%5BPiHAT%5D%20%3A%20I2C%0D%0A%0D%0A%40enduml)
+<!--@startuml
 
 frame apps {
 [dialer]
@@ -83,7 +83,7 @@ frame hardware {
 [mir] ..> [PiTFT] : SPI, GPIO
 [mir] ..> [PiHAT] : I2C
 
-@enduml)
+@enduml-->
 
 ## FAQ
 ### Why don't you use Android?
